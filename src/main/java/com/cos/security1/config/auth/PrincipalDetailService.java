@@ -23,6 +23,8 @@ public class PrincipalDetailService implements UserDetailsService{
 	//이 파라미터로 받아지지 않는다.
 	
 	//시큐리티 session(내부 Authentication(내부 UserDetatils))
+	//여기서 UserDetails가 return될 때 Authentication 객체 안에 위치하게 된다.
+	//함수 종료시 @AuthenticationPrincipal 어노테이션이 만들어진다.
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		
